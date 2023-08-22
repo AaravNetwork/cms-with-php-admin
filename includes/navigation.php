@@ -35,7 +35,7 @@
                 }
                 ?>
                 <li>
-                    <a href="admin">Admin</a>
+                    <a href="admin" target="_blank">Admin</a>
                 </li> 
             </ul>
         </div>
