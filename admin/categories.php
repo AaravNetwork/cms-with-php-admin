@@ -1,7 +1,7 @@
-<?php include './includes/header.php'; ?>
+<?php include './includes/admin_header.php'; ?>
 <div id="wrapper">
     <!-- NAVIGATION START -->
-    <?php include './includes/navigation.php'; ?>
+    <?php include './includes/admin_navigation.php'; ?>
     <!-- NAVIGATION END -->
 
     <div id="page-wrapper">
@@ -25,6 +25,26 @@
                             </div>
                         </form>
                     </div>
+                    <div class="col-xs-6">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Category Title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>123</td>
+                                    <td>Software Engineer</td>
+                                </tr>
+                                <tr>
+                                    <td>123</td>
+                                    <td>Software Engineer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
 
 
@@ -47,4 +67,4 @@
     <!-- /#page-wrapper -->
 </div>
 <!-- /#wrapper -->
-<?php include './includes/footer.php'; ?>
+<?php include './includes/admin_footer.php'; ?>
