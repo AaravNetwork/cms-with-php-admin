@@ -41,34 +41,16 @@
                                 <input type="submit" class="btn btn-primary" name="submit" value="Add Category">
                             </div>
                         </form>
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="cat_title">Edit Category</label>
+                        <?php
 
-                                <?php
-                                // Edit category from db query
-                                if (isset($_GET['edit'])) {
-                                    $cat_edit_id = $_GET['edit'];
-                                    $edit_query = "SELECT * FROM categories WHERE cat_id = $cat_edit_id";
-                                    $run_edit_query = mysqli_query($conn, $edit_query); 
-                                    while($edit_row = (mysqli_fetch_assoc($run_edit_query))) {
-                                        $cat_edit_id_input = $edit_row['cat_id'];
-                                        $cat_edit_title_input = $edit_row['cat_title'];
-                                    }
-                                ?>
+                        if (isset($_GET['edit'])) {
+                            $cat_id = $_GET['edit'];
 
-                                <input type="text" class="form-control" name="cat_title" id="cat_title" placeholder="Edit Category" value="<?php if(isset($cat_edit_title_input)) {
-                                    echo $cat_edit_title_input;
-                                } ?>">    
 
-                                <?php } ?>
+                            include "./includes/update_categories.php";
+                        }
 
-                                
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary" name="submit" value="Edit Category">
-                            </div>
-                        </form>
+                        ?>
                     </div>
                     <div class="col-xs-6">
                         <table class="table table-bordered table-hover">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2023 at 05:28 PM
+-- Generation Time: Aug 24, 2023 at 10:06 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -37,10 +37,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
-(1, 'Bootstrap'),
-(2, 'Javascript'),
-(3, 'PHP'),
-(4, 'Java');
+(10, 'Node Js'),
+(11, 'PHP 8'),
+(12, 'Javascript'),
+(13, 'React'),
+(16, 'Java');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `cat_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `posts`
