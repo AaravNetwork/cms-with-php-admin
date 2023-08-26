@@ -19,7 +19,7 @@ function insert_categories()
 }
 
 function updateall_categories()
-{
+{   global $conn;
     if (isset($_GET['edit'])) {
         $cat_id = $_GET['edit'];
         include "./includes/update_categories.php";
