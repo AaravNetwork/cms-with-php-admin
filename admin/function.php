@@ -1,4 +1,15 @@
 <?php
+
+function confirm($result)
+{
+    global $conn, $add_post_query;
+    if (!$result) {
+        die("Query Failed" . mysqli_error($conn));
+    } else {
+        $exe_query = mysqli_query($conn, $add_post_query);
+    }
+}
+
 function insert_categories()
 {
     global $conn;

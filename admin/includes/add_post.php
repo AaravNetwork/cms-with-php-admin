@@ -13,9 +13,15 @@
         $post_content = $_POST['post_content'];
         $post_date = date('d-m-y');
         $post_comment_count = 4;
+
+        move_uploaded_file($post_image_temp, "../images/$post_image");
+
+        $add_post_query = "INSERT INTO posts (post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_comment_count, post_status) VALUES ('$post_category_id', '$post_title', '$post_author', now(), '$post_image', '$post_content', '$post_tags', '$post_comment_count', '$post_status')";
+
+        confirm($add_post_query);
+
+        
     }
-
-
 ?>
 
 <form action="" method="post" enctype="multipart/form-data">
