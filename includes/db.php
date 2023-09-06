@@ -3,7 +3,7 @@
     $dbhost = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "cms";
+    $dbname = "new_cms";
 
     $conn = mysqli_connect($dbhost, $username, $password, $dbname);
 

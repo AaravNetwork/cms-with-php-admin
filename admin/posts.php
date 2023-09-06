@@ -25,25 +25,22 @@
                             include "includes/add_post.php";
                             break;
 
-                            case '100';
-                            echo 'Nice 100';
+                            case 'edit_post';
+                            include "includes/edit_post.php";
                             break;
 
                             case '200';
                             echo 'Nice 200';
                             break;
 
-
                             default:
                             include "includes/view_all_posts.php";
                             break;
                         }
-
                     ?>
                 </div>
             </div>
             <!-- /.row -->
-
         </div>
         <!-- /.container-fluid -->
     </div>

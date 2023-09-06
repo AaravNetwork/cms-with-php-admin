@@ -10,6 +10,19 @@
             <th>Tags</th>
             <th>Comments Count</th>
             <th>Date</th>
+            <th>Actions</th>
+
+
+            <?php 
+                if(isset($_GET['delete'])) {
+                    $del_post_id = $_GET['delete'];
+
+                    $del_post_query = "DELETE FROM posts WHERE post_id = {$del_post_id}";
+                    $del_post_query_exe = mysqli_query($conn, $del_post_query);
+                    header('Location: ./posts.php');
+                }
+
+            ?>
         </tr>
     </thead>
     <tbody>
@@ -37,6 +50,7 @@
             echo "<td style='vertical-align: middle;'>{$post_tags}</td>";
             echo "<td style='vertical-align: middle;'>{$post_comments_count}</td>";
             echo "<td style='vertical-align: middle;'>{$post_date}</td>";
+            echo "<td style='vertical-align: middle;'><a href='posts.php?source=edit_post&edit_pid={$post_id}'>Edit</a><br><a href='posts.php?delete={$post_id}'>Delete</a></td>";
             echo "</tr>";
         }
         ?>
